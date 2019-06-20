@@ -13,7 +13,7 @@ public func BSAdaptW(_ floatValue: CGFloat) -> CGFloat {
     return BSAdaptScreenConfig.service.adaptBlock?(floatValue) ?? floatValue
 }
 
-class BSAdaptScreenConfig {
+public class BSAdaptScreenConfig {
     typealias BSAdaptScreenBlock = (CGFloat)->(CGFloat)
     
     private(set) var adaptBlock: BSAdaptScreenBlock?
