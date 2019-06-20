@@ -14,12 +14,12 @@ public func BSAdaptW(_ floatValue: CGFloat) -> CGFloat {
 }
 
 public class BSAdaptScreenConfig {
-    typealias BSAdaptScreenBlock = (CGFloat)->(CGFloat)
+    public typealias BSAdaptScreenBlock = (CGFloat)->(CGFloat)
     
     private(set) var adaptBlock: BSAdaptScreenBlock?
-    static let service = BSAdaptScreenConfig()
+    public static let service = BSAdaptScreenConfig()
 
-    static func config(_ handle: BSAdaptScreenBlock?) {
+    public static func config(_ handle: BSAdaptScreenBlock?) {
         BSAdaptScreenConfig.service.adaptBlock = handle
     }
     
